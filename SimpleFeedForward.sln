@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFeedForward", "Source\SimpleFeedForward\SimpleFeedForward.csproj", "{729E3CD8-ED7A-4E32-8E87-D6A49AB3DCED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFeedForward.Training", "Source\SimpleFeedForward.Training\SimpleFeedForward.Training.csproj", "{23178A8D-F5E9-419F-93CA-35F81098717D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{729E3CD8-ED7A-4E32-8E87-D6A49AB3DCED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729E3CD8-ED7A-4E32-8E87-D6A49AB3DCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729E3CD8-ED7A-4E32-8E87-D6A49AB3DCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729E3CD8-ED7A-4E32-8E87-D6A49AB3DCED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23178A8D-F5E9-419F-93CA-35F81098717D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23178A8D-F5E9-419F-93CA-35F81098717D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23178A8D-F5E9-419F-93CA-35F81098717D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23178A8D-F5E9-419F-93CA-35F81098717D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
