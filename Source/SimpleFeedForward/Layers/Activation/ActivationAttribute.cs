@@ -1,9 +1,4 @@
-﻿//
-// Yuri Vetroff
-// yuri.vetroff@gmail.com
-//
-
-using System;
+﻿using System;
 
 namespace SimpleFeedForward.Layers
 {
@@ -14,6 +9,6 @@ namespace SimpleFeedForward.Layers
             ActivationType = activationType;
         }
 
-        public ActivationType ActivationType { get; private set; }
+        public ActivationType ActivationType { get; }
     }
 }

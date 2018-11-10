@@ -1,9 +1,4 @@
-﻿//
-// Yuri Vetroff
-// yuri.vetroff@gmail.com
-//
-
-namespace SimpleFeedForward.Layers
+﻿namespace SimpleFeedForward.Layers
 {
     public enum ActivationType
     {

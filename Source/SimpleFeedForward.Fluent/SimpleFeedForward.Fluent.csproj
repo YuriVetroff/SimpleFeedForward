@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23178A8D-F5E9-419F-93CA-35F81098717D}</ProjectGuid>
+    <ProjectGuid>{301E3E83-616C-4AAB-AC30-E226DA1515AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleFeedForward.Training</RootNamespace>
-    <AssemblyName>SimpleFeedForward.Training</AssemblyName>
+    <RootNamespace>SimpleFeedForward.Fluent</RootNamespace>
+    <AssemblyName>SimpleFeedForward.Fluent</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,27 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMinibatchTrainer.cs" />
-    <Compile Include="MinibatchSource.cs" />
-    <Compile Include="Learners\AbstractLearner.cs" />
-    <Compile Include="Learners\AdamLearner.cs" />
-    <Compile Include="IEpochTrainer.cs" />
-    <Compile Include="Learners\MomentumLearner.cs" />
+    <Compile Include="FluentNetwork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Learners\ILearner.cs" />
-    <Compile Include="Learners\SgdLearner.cs" />
-    <Compile Include="StopConditions\EpochCountStopCondition.cs" />
-    <Compile Include="StopConditions\IStopCondition.cs" />
-    <Compile Include="StopConditions\SmallestRequiredLossStopCondition.cs" />
-    <Compile Include="Trainer.cs" />
-    <Compile Include="Learners\SimpleAdamTrainer.cs" />
-    <Compile Include="TrainingConfig.cs" />
-    <Compile Include="TrainingProgress.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleFeedForward.Data\SimpleFeedForward.Data.csproj">
       <Project>{c16da600-3c32-481f-908b-3ff79e3eae45}</Project>
       <Name>SimpleFeedForward.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleFeedForward.Training\SimpleFeedForward.Training.csproj">
+      <Project>{23178a8d-f5e9-419f-93ca-35f81098717d}</Project>
+      <Name>SimpleFeedForward.Training</Name>
     </ProjectReference>
     <ProjectReference Include="..\SimpleFeedForward\SimpleFeedForward.csproj">
       <Project>{729e3cd8-ed7a-4e32-8e87-d6a49ab3dced}</Project>
@@ -69,11 +59,4 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

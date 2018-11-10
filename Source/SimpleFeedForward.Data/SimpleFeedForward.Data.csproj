@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDBCBF16-24CF-49C4-B448-0DD6D72320D9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>MinimalExample</RootNamespace>
-    <AssemblyName>MinimalExample</AssemblyName>
+    <ProjectGuid>{C16DA600-3C32-481F-908B-3FF79E3EAE45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleFeedForward.Data</RootNamespace>
+    <AssemblyName>SimpleFeedForward.Data</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,29 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="DataItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Source\SimpleFeedForward.Data\SimpleFeedForward.Data.csproj">
-      <Project>{c16da600-3c32-481f-908b-3ff79e3eae45}</Project>
-      <Name>SimpleFeedForward.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\SimpleFeedForward.Fluent\SimpleFeedForward.Fluent.csproj">
-      <Project>{301e3e83-616c-4aab-ac30-e226da1515af}</Project>
-      <Name>SimpleFeedForward.Fluent</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\SimpleFeedForward.Training\SimpleFeedForward.Training.csproj">
-      <Project>{23178a8d-f5e9-419f-93ca-35f81098717d}</Project>
-      <Name>SimpleFeedForward.Training</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\SimpleFeedForward\SimpleFeedForward.csproj">
-      <Project>{729e3cd8-ed7a-4e32-8e87-d6a49ab3dced}</Project>
-      <Name>SimpleFeedForward</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
