@@ -1,8 +1,7 @@
 ﻿namespace SimpleFeedForward.Training.Learners
 {
-    public interface ILearner
+    public interface ILearner : IInitializing<INetwork>
     {
         void UpdateWeights();
-        void Init(INetwork network);
     }
 }
